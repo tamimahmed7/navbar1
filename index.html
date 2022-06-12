@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <nav class="nav">
+     <div class="logo"><img src="img/logo-3.png" width="auto" height="35px" alt=""></div>
+     <span class="nav_input"><input type="text" placeholder="serch itame here"></span>
+        <div class="menu-right">   
+            <span onclick="myFunction()" class="bar">&#9776;</span>
+        <ul id="menu" class="nav__list">
+          <li class="nav__listitem">About
+            <ul class="nav__listitemdrop">
+              <li>Our Team</li>
+              <li>Our Process</li>
+              <li>History</li>
+            </ul>
+          </li>
+          <li class="nav__listitem">Work
+            <ul class="nav__listitemdrop">
+              <li>Portfolio</li>
+              <li>Showcase</li>
+            </ul>
+          </li>
+          <li class="nav__listitem">Contact</li>
+        </ul>
+
+    </div>
+      </nav>
+
+    
+    <script>
+
+      function myFunction() {
+        var x = document.getElementById("menu");
+
+        if (x.style.display == "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+
+</body>
+</html>

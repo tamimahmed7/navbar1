@@ -1,0 +1,161 @@
+
+
+/*   border radius */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+.nav {
+position: relative;
+  width: 100vw;
+  height: 80px;
+  box-shadow: 0 0 10px black;}
+ .logo {
+    position: absolute;
+    top: 13px;
+    left:8%;
+    padding-top: 5px;
+ }
+ .nav_input  {
+    position:absolute;
+    top: 13px;
+    left: 12%;
+    padding-top: 5px;
+ }
+ .nav_input  input {
+    padding:8px 40px 8px 7px;
+    border-radius: 30px;
+    outline: none;
+    border:1px solid black;
+ }
+
+  .nav__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin: 0 2rem;}
+
+        .nav__listitem {
+      list-style: none;
+      font-weight: bold;
+      position: relative;
+      padding: 1.5rem 1rem;
+      cursor: pointer;
+        }
+        .nav__listitem::after {
+        content: "";
+        width: 0;
+        height: 0.3rem;
+        border-radius:10px;
+        position: absolute;
+        left: 1rem;
+        bottom: 0.1rem;
+        background-color:rgb(0, 0, 0);
+        transition: width 200ms ease-in;
+      }
+
+      .nav__listitem:hover::after,
+      .nav__listitem:focus::after {
+        width: 80%;
+      }
+
+      .nav__listitem:hover ul,
+         .nav__listitem:focus ul {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav__listitemdrop {
+        position: absolute;
+        top: 4rem;
+        left: -1rem;
+        box-shadow: 0 0 10px red;
+        background-color: white;
+        border-radius:10px;
+        width: 12rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 200ms ease-in-out;
+      }
+ 
+      .nav__listitemdrop li {
+          list-style: none;
+          padding: 0.5rem 1rem;
+          border-radius:10px;
+          transition: background-color 200ms ease-in-out;}
+
+          .nav__listitemdrop    li:hover,
+          .nav__listitemdrop li:focus {
+            background-color:none;
+            border-bottom: 2px solid red;
+          }
+      
+          .menu-right {
+            text-align: right;
+        }
+          .bar {
+            margin: 0px 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: rgb(250, 9, 9);
+            display: none;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            .bar {
+                display: block;
+            }
+            .nav_input  {
+                display: none;
+             }
+             .nav {
+                position: relative;
+                  width: 100vw;
+                  height: 80px;
+                  padding-top: 20px;
+                  box-shadow: 0 0 1px black;}
+             .logo {
+                position: absolute;
+                top:0px;
+                left:8%;
+                padding-top: 20px;
+             }
+            ul li {
+                display: block;
+                font-size: 10px;
+            }
+            .nav__list {
+                display: none;
+                text-align: center;
+            }
+            .nav__listitemdrop {
+                position: absolute;
+                top: 4rem;
+                left: -1rem;
+                box-shadow: 0 0 10px red;
+                background-color: white;
+                border-radius:10px;
+                width: 8rem;
+                padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 200ms ease-in-out;
+              }
+         
+        }
+       
